@@ -4,7 +4,12 @@ const net = require("net");
 const connect = function () {
   const conn = net.createConnection({
     host: "172.25.186.223", 
-    port: 50541, 
+    port: 50541,
+  }); 
+
+    conn.on("connect", () => {
+      console.log("Successfully connected to game server");
+      conn.write("Name: AMZ");
   });
 
   conn.setEncoding("utf8");
