@@ -1,6 +1,4 @@
-// play code
-const { connect } = require('./client');
-
+// client code
 const net = require("net");
 
 const connect = function () {
@@ -16,3 +14,5 @@ const connect = function () {
 
 console.log("Connecting ...");
 connect();
+
+module.exports = { connect };
